@@ -1,0 +1,43 @@
+{
+    "name": "mieproject/project-initialization",
+    "description": "MIE Project - Project Initialization package | includes all `default` modules and packages",
+    "type": "package",
+    "license": "MIT",
+    "authors": [],
+    "autoload": {
+        "psr-4": {
+            "MieProject\\ProjectInitialization\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MieProject\\ProjectInitialization\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MieProject\\ProjectInitialization\\ProjectInitializationServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "require": {
+        "mieproject/settings": "dev-master",
+        "mieproject/files": "dev-master",
+        "spatie/laravel-activitylog": "^3.17",
+        "spatie/laravel-permission": "^4.2",
+        "spatie/laravel-analytics": "^3.11"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
