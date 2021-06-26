@@ -2,6 +2,9 @@
 
 namespace MieProject\ProjectInitialization;
 
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\ServiceProvider;
 
 class ProjectInitializationServiceProvider extends ServiceProvider
@@ -27,17 +30,23 @@ class ProjectInitializationServiceProvider extends ServiceProvider
         // for this package
         require_once __DIR__ . '/helpers.php';
 
+        (new playWithFiles)->run();
 
+        $this->publishResources();
         //
 
-//        $this->mergeConfigFrom(
-//            __DIR__.'/config/setting_fields.php' , 'setting_fields'
-//        );
-//
-//        $this->loadViewsFrom(__DIR__.'/views', 'mie-setting');
-//
-//        $this->loadRoutesFrom(__DIR__."/routes/web.php");
-//        $this->loadMigrationsFrom(__DIR__.'/migrations');
-
     }
+
+    protected function publishResources()
+    {
+        $this->publishes([
+            __DIR__ . '/database/seeders/PermissionsDemoSeeder.php' => database_path('seeders/PermissionsDemoSeeder.php'),
+        ]);
+    }
+
+
+
+
+
+
 }
