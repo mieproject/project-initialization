@@ -1,6 +1,6 @@
 {
     "name": "mieproject/project-initialization",
-    "description": "MIE Project - Project Initialization package | includes all `default` modules and packages",
+    "description": "MIE Project - Project Initialization package | includes all `default` modules and packages | use         \"mieproject/files\": \"dev-master\"",
     "type": "package",
     "license": "MIT",
     "authors": [],
@@ -33,7 +33,7 @@
     },
     "require": {
         "mieproject/settings": "dev-master",
-        "mieproject/files": "dev-master",
+
         "spatie/laravel-activitylog": "^3.17",
         "spatie/laravel-permission": "^4.2",
         "spatie/laravel-analytics": "^3.11"
