@@ -2,5 +2,4 @@ php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvid
 php artisan optimize:clear
 php artisan migrate
 php artisan vendor:publish --provider="MieProject\ProjectInitialization\ProjectInitializationServiceProvider"
-php artisan db:seed --class=PermissionsDemoSeeder
 php artisan optimize:clear
