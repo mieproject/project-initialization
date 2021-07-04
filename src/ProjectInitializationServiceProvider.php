@@ -33,7 +33,13 @@ class ProjectInitializationServiceProvider extends ServiceProvider
         (new playWithFiles)->run();
 
         $this->publishResources();
-        //
+        
+        $this->publishes([
+            __DIR__.'/config/mie.php' => config_path('mie.php'),
+        ]);
+        $this->mergeConfigFrom(
+            __DIR__.'/config/mie.php' , 'mie'
+        );
 
     }
 
